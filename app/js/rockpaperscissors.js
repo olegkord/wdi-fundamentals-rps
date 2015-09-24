@@ -114,21 +114,23 @@ function playToFive() {
         console.log(getPlayerMove())
         if (getWinner(getPlayerMove(),getComputerMove()) === 'player')
         {
-            console.log("Player has won!");
+
             playerWins += 1;
         }
         else if (getWinner(getPlayerMove(),getComputerMove()) === 'computer')
         {
-            console.log("Computer has won!");
+
             computerWins += 1;
         }
-        else
-        {
-            console.log('The game was a tie. Play again.')
-        }
-
     }
-
+    if playerWins === 5
+    {
+        console.log("the player has won");
+    }
+    else if computerWins === 5
+    {
+        console.log("the computer has won");
+    }
     return [playerWins, computerWins];
 }
 
